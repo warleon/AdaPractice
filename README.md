@@ -1,7 +1,7 @@
 # AdaPractice
  
  ## To DO
- [] Counting inversions
- [] Maximum SubArray sum 
- [] Karatsuba
- [] Strassen
+    - Counting inversions
+    - Maximum SubArray sum 
+    - Karatsuba
+    - Strassen
