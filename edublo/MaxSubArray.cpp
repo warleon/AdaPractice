@@ -25,7 +25,7 @@ tuple<int,int,int> FindMaxCrossingSubArray(vector<int> array, int low, int mid, 
 
     int maxRight = 0;
 
-    for(auto i = mid+1 ; i < high ; i++){
+    for(auto i = mid+1 ; i <= high ; i++){
         sum += array.at(i);
         if (sum > rightSum){
             rightSum = sum;
@@ -41,7 +41,7 @@ tuple<int,int,int> FindMaxCrossingSubArray(vector<int> array, int low, int mid, 
 tuple<int,int,int> FindMaximumSubArray(vector<int> array, int low, int high){
 
     if( high == low)
-        return tuple<int,int,int>(low,high,array[low]);
+        return tuple<int,int,int>(low,high,array.at(low));
     else{
     
         int mid = (high+low)/2;//low + (high-low)/2;
@@ -66,12 +66,12 @@ tuple<int,int,int> FindMaximumSubArray(vector<int> array, int low, int high){
 
 int main(){
 
-    //vector<int> vec = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
+    vector<int> vec = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
 
-    vector<int> vec = {0,1,2,3,4,5};
+    //vector<int> vec = {0,1,2,3,4,5};
 
 
-    tuple<int,int,int> manin = FindMaximumSubArray(vec,0,vec.size());
+    tuple<int,int,int> manin = FindMaximumSubArray(vec,0,vec.size()-1);
 
     cout<<get<0>(manin)<<'\t'<<get<1>(manin)<<'\t'<<get<2>(manin);
 
