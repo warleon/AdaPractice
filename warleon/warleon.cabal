@@ -29,6 +29,6 @@ executable warleon
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base ^>=4.15.0.0
+    build-depends:    base ^>=4.15.0.0, digits
     hs-source-dirs:   app
     default-language: Haskell2010
